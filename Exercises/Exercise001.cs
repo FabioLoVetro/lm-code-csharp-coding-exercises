@@ -36,7 +36,13 @@ namespace Exercises
         public string GenerateInitials(string firstName, string lastName)
         {
             // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            // obtein the initial of the name
+            string iniN = firstName.Substring(0, 1);
+            // obtein the initial of the name
+            string iniL = lastName.Substring(0, 1);
+            //return a string with the initials
+            return iniN +"."+ iniL;
         }
 
         public double AddVat(double originalPrice, double vatRate)
