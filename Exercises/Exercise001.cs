@@ -9,7 +9,28 @@ namespace Exercises
         public string CapitalizeWord(string word)
         {
             // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            // in case the parameter is null, the method return null
+            if (word == null) {
+                return null;
+            }
+            // in case the parameter is "", the method return ""
+            if (word == "")
+            {
+                return "";
+            }
+            // in case the parameter is " ", the method return " "
+            if (word == " ")
+            {
+                return " ";
+            }
+            // get the first charatter of the string
+            string firstChar = word.Substring(0, 1);
+            // get the string without the first charatter
+            string restOfTheString = word.Substring(1, word.Length-1);
+            // return a string equal to word with the first charatter uppercase
+            return firstChar.ToUpper() + restOfTheString;
         }
 
         public string GenerateInitials(string firstName, string lastName)
