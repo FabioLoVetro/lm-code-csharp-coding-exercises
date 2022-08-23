@@ -3,10 +3,20 @@ namespace Exercises
 {
     public class Exercise003
     {
-        // Replace the exception statement below with your code!
-        public string[] IceCreamFlavours => throw new NotImplementedException();
+        // all flavours
+        public string[] IceCreamFlavours = 
+            { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
 
-        // Replace the exception statement below with your code!
-        public int IceCreamCode(string iceCreamFlavour) => throw new NotImplementedException();
+        // position of the flavour
+        public int IceCreamCode(string iceCreamFlavour)
+        {
+            for (int i = 0; i < IceCreamFlavours.Length; i++)
+            {
+                if (IceCreamFlavours[i] == iceCreamFlavour)
+                {
+                    return i;
+                }
+            }
+        }
     }
 }
