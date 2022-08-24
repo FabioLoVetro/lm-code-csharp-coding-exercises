@@ -18,16 +18,34 @@ namespace Exercises.Tests
             Exercise005.IsPangram("").Should().Be(false);
         }
 
+                [Test]
+        public void IsPangram_Should_Return_False_For_Space_Sentence()
+        {
+            Exercise005.IsPangram(" ").Should().Be(false);
+        }
+
         [Test]
         public void IsPangram_Should_Return_True_For_Perfect_LowerCase_Pangram()
         {
             Exercise005.IsPangram("abcdefghijklmnopqrstuvwxyz").Should().Be(true);
         }
 
+                [Test]
+        public void IsPangram_Should_Return_True_For_Perfect_LowerCase_Reverse_Pangram()
+        {
+            Exercise005.IsPangram("zyxwvutsrqponmlkjihgfedcba").Should().Be(true);
+        }
+
         [Test]
         public void IsPangram_Should_Return_True_For_Perfect_UpperCase_Pangram()
         {
             Exercise005.IsPangram("ABCDEFGHIJKLMNOPQRSTUVWXYZ").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Perfect_UpperCase_Reverse_Pangram()
+        {
+            Exercise005.IsPangram("ZYXWVUTSRQPONMLKJIHGFEDCBA").Should().Be(true);
         }
 
         [Test]
@@ -64,6 +82,12 @@ namespace Exercises.Tests
         public void IsPangram_Should_Return_True_For_Pangram_With_Numbers()
         {
             Exercise005.IsPangram("the 1 quick brown fox jumps over the 2 lazy dogs").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Special_Characters()
+        {
+            Exercise005.IsPangram("AB@CD[EF{GH}IJ#KL~MNO?PQR.STUV£WX$YZ%").Should().Be(true);
         }
     }
 }
