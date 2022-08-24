@@ -12,7 +12,7 @@ namespace Exercises.Tests
         {
             Exercise003 = new Exercise003();
         }
-
+        
         [Test]
         public void Given_Chocolate_Chip_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
         {
@@ -46,6 +46,24 @@ namespace Exercises.Tests
             string[] expected = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
 
             Exercise003.IceCreamFlavours.Should().Equal(expected);
+        }
+
+        [Test]
+        public void Given_Egg_Cream_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
+        {
+            string iceCreamFlavour = "Egg Cream";
+            int expectedCode = -1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+        [Test]
+        public void Given_Mint_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
+        {
+            string iceCreamFlavour = "Mint";
+            int expectedCode = -1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
         }
     }
 }
