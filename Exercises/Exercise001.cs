@@ -4,28 +4,27 @@ using Exercises.Models;
 
 namespace Exercises
 {
+    /// <summary>
+    /// Class <c>Exercise001</c> contains exercise001.
+    /// </summary>
     public class Exercise001
     {
+        /// <summary>
+        /// Method <c>CapitalizeWord</c> returns the string word with the first charatter uppercase.
+        /// <param name = word> the string word. </param>
+        /// <return> the string word with the first charatter uppercase. </return>
+        /// </summary>
         public string CapitalizeWord(string word)
         {
-            // Replace the exception statement below with your code!
-            //throw new NotImplementedException();
-
             // in case the parameter is null, the method return null
-            if (word == null)
-            {
-                return null;
-            }
+            if (word == null) return null;
+
             // in case the parameter is "", the method return ""
-            if (word == "")
-            {
-                return "";
-            }
+            if (word == "") return "";
+
             // in case the parameter is " ", the method return " "
-            if (word == " ")
-            {
-                return " ";
-            }
+            if (word == " ") return " ";
+
             // get the first charatter of the string
             string firstChar = word.Substring(0, 1);
             // get the string without the first charatter
@@ -34,10 +33,14 @@ namespace Exercises
             return firstChar.ToUpper() + restOfTheString;
         }
 
+        /// <summary>
+        /// Method <c>GenerateInitials</c> returns the initials.
+        /// <param name = firstName> the name. </param>
+        /// <param name = lastName> the surname. </param>
+        /// <return> the string with the initials. </return>
+        /// </summary>
         public string GenerateInitials(string firstName, string lastName)
         {
-            // Replace the exception statement below with your code!
-            //throw new NotImplementedException();
             // to obtein the initial of the name
             string iniN = firstName.Substring(0, 1);
             // to obtein the initial of the name
@@ -46,15 +49,14 @@ namespace Exercises
             return iniN + "." + iniL;
         }
 
+        /// <summary>
+        /// Method <c>AddVat</c> add vat to a price.
+        /// <param name = originalPrice> the price. </param>
+        /// <param name = vatRate> the vat. </param>
+        /// <return> the double price + vat. </return>
+        /// </summary>
         public double AddVat(double originalPrice, double vatRate)
         {
-            // Replace the exception statement below with your code!
-            //throw new NotImplementedException();
-
-            // NB: Look in Exercise001Tests.cs
-            //     There is a test with commented out assertions.
-            //     For an extra challenge, uncomment those assertions and make that test pass too.
-
             // to manage the exception price negative
             if (originalPrice < 0) throw new ArgumentException("Price cannot be negative. Please enter a valid price.");
             // to manage the exception vat negative
@@ -65,11 +67,13 @@ namespace Exercises
             return Math.Round((originalPrice + vat), 2);
         }
 
+        /// <summary>
+        /// Method <c>Reverse</c> reverse a string.
+        /// <param name = sentence> the string to reverse. </param>
+        /// <return> the string reversed. </return>
+        /// </summary>
         public string Reverse(string sentence)
         {
-            // Replace the exception statement below with your code!
-            //throw new NotImplementedException();
-
             if (sentence == null) return null;
 
             // to obtain the array of the charatters from the string
@@ -80,10 +84,13 @@ namespace Exercises
             return new string(array);
         }
 
+        /// <summary>
+        /// Method <c>CountLinuxUsers</c> counts users that use Linux.
+        /// <param name = users> the list of the users. </param>
+        /// <return> int, the number of the users. </return>
+        /// </summary>
         public int CountLinuxUsers(List<User> users)
         {
-            // Replace the exception statement below with your code!
-            //throw new NotImplementedException();
             int count = 0;
             // if the list is null return 0
             if (users == null) { return 0; }
@@ -92,11 +99,7 @@ namespace Exercises
             // iteration the list and count how many Linux OP user
             foreach (User u in users)
             {
-                if (u.Type == "Linux")
-                {
-                    count++;
-                }
-
+                if (u.Type == "Linux") count++;
             }
             // return the number of the user for Linux
             return count;
