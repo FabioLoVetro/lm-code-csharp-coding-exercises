@@ -29,5 +29,13 @@ namespace Exercises.Tests
             DateTime expectedResult = new(2052, 10, 3, 1, 46, 39);
             actualResult.Should().Be(expectedResult);
         }
+
+        [Test]
+        public void AddGigaSecond_Should_Return_Result_When_Result_Is_Last_Date_Possible()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(9968, 4, 23, 22, 13, 19, 0));
+            DateTime expectedResult = new(9999, 12, 31, 23, 59, 59);
+            actualResult.Should().Be(expectedResult);
+        }
     }
 }
