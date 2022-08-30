@@ -15,7 +15,7 @@ namespace Exercises
         /// </summary>
         public bool IsFromManchester(Person person)
         {
-            return (person != null && person.getCity() == "Manchester");
+            return (person != null && person.city == "Manchester");
         }
         /// <summary>
         /// Method <c>CanWatchFilm</c> returns
@@ -27,7 +27,7 @@ namespace Exercises
         /// </summary>
         public bool CanWatchFilm(Person person, int ageLimit)
         {
-            return (person != null && person.getAge() >= ageLimit);
+            return (person != null && person.age >= ageLimit);
         }
     }
 }
