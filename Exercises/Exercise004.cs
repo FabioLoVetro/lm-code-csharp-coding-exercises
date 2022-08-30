@@ -6,6 +6,9 @@ namespace Exercises
     /// </summary>
     public class Exercise004
     {   
+        //A gigasecond is 10^9 (1,000,000,000) seconds.
+        static int GIGASECOND_TO_ADD_TO_THE_DATETIME = 1000000000;
+
         /// <summary>
         /// Method <c>AddGigaSecond</c> returns
         /// a DateTime as a sum of dateTime passed as parameter and a gigasecond.
@@ -14,8 +17,8 @@ namespace Exercises
         /// </summary>
         public static DateTime AddGigaSecond(DateTime dateTime)
         {
-            //A gigasecond is 10^9 (1,000,000,000) seconds.
-            return dateTime.AddSeconds(1000000000);
+            //return a new date as result of the dateTime + gigasecond
+            return dateTime.AddSeconds(GIGASECOND_TO_ADD_TO_THE_DATETIME);
         }
     }
 }
